@@ -1,14 +1,25 @@
-<app-header></app-header>
-<div class="container>"></div>
+<!-- <app-header></app-header> -->
+<div class="container"></div>
+<app-title [testo]="'prodotti'"></app-title>
 
-<h1>Ciao!</h1>
-<h3>novità!</h3>
-<app-lista-prodotti></app-lista-prodotti>
-<h3>suggerimenti!</h3>
-<app-lista-prodotti></app-lista-prodotti>
+<app-lista-prodotti
+  titolo="novità"
+  [prodotti]="prodotti_novita"
+></app-lista-prodotti>
+
+<app-title testo="blog"></app-title>
+<P>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati dolores
+  exercitationem facere praesentium nemo officia iure, quidem vel corporis,
+  natus ad vitae nulla asperiores provident harum illo perferendis magnam
+  neque?</P
+>
+<app-lista-prodotti
+  titolo="suggerimenti"
+  [prodotti]="prodotti_suggerimenti"
+></app-lista-prodotti>
 
 <div style="max-width: 1024px; margin: auto">
-
-<app-footer></app-footer>
+  <app-footer></app-footer>
 </div>
 <router-outlet />

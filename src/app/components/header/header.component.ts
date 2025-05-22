@@ -14,19 +14,27 @@ nome= "Marta";
 anno: number=78;
 animale: Animale = {nome: "Fiocco", razza:"gatto"}
 prodotto?:Prodotto; //? il punto interrogativo indica che la proprietà è opzionale: può essere presente oppure no(undefined).
-bici?:Prodotto={
-    id: 1,
-    nome: "bicicletta",
-    prezzo: 120,
-    inOfferta: true
-  }
-esempio(){
-  this.prodotto ={
-    id: 1,
-    nome: "bicicletta",
-    prezzo: 120,
-    inOfferta: true
-  }
-} 
-}
 
+   bici?: Prodotto = {
+    nome: "Bicicletta",
+    prezzo: 120,
+    desc: "Test",
+    foto: ""
+  };
+  esempio() {
+    this.prodotto = {
+      desc: "Test",
+      foto: "",
+      nome: "Bicicletta",
+      prezzo: 120,
+    };
+    let eta = 16;
+    let patentato = false;
+    if (eta >= 18) {
+      patentato = true;
+    } else {
+      patentato = false;
+    }
+    patentato = eta >= 18 ? true : false; // operatore ternario
+  }
+}
